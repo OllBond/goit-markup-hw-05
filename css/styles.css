@@ -374,9 +374,10 @@ img {
 
 .our-projects-link::before {
   position: absolute;
-  content: '';
   top: 0;
   left: 0;
+
+  content: '';
   width: 50%;
   height: 50%;
   background: rgba(33, 150, 243, 0.9);
