@@ -373,8 +373,8 @@ img {
 }
 
 .our-projects-link::before {
-  content: '';
   position: absolute;
+  content: '';
   top: 0;
   left: 0;
   width: 50%;
@@ -395,8 +395,8 @@ img {
 }
 
 .our-projects-thumb {
-  display: flex;
   position: absolute;
+  display: flex;
   transform: translate(0%, -100%);
   background-color: var(--accent-text-color);
   opacity: 0;
