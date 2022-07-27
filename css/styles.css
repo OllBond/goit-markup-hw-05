@@ -624,7 +624,7 @@ img {
   height: 80px;
   margin-right: 70px;
 }
-/* Модальне вікно */
+/* ============================ Modal window =========================*/
 .backdrop {
   position: fixed;
   top: 0px;
@@ -633,6 +633,13 @@ img {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .modal {
   position: absolute;
   top: 50%;
@@ -641,9 +648,44 @@ img {
 
   min-width: 528px;
   min-height: 581px;
+
   background-color: var(--background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+.icon-close {
+  fill: var(--color-logo);
+}
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+
+  background: var(--background-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
 /* /Модальне вікно */
+
+/* <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-close" viewBox="0 0 18 18">
+<path d="M15 4.108 13.892 3 9.5 7.392 5.108 3 4 4.108 8.392 8.5 4 12.892 5.108 14 9.5 9.608 13.892 14 15 12.892 10.608 8.5 15 4.108Z"/></path>
+</symbol>
+</defs>
+</svg> */
+
+/* <div class="backdrop is-hidden">
+      <div class="modal">
+        <button type="button" class="button-close">
+          <svg class="icon-close" with="18" height="18">
+            <use href="./images/icon-close.svg"></use>
+          </svg>
+        </button>
+      </div>
+    </div> */
