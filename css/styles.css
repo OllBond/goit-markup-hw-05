@@ -14,6 +14,7 @@
   --backround-color-hero: #c4c4c4;
   --bgc-social-icons: #afb1b8;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --timing-appear: 250ms;
 }
 /* ========================Body============================== */
 
@@ -151,7 +152,12 @@ img {
 .site-nav-list .site-nav-link {
   color: var(--title-text-color);
 }
-.site-nav-list .active-link,
+.site-nav-list .studio-active-link,
+.site-nav-list a:hover,
+.site-nav-list a:focus {
+  color: var(--accent-text-color);
+}
+.site-nav-list .portfolio-active-link,
 .site-nav-list a:hover,
 .site-nav-list a:focus {
   color: var(--accent-text-color);
@@ -169,11 +175,7 @@ img {
 
   background-color: var(--accent-text-color);
   border-radius: 2px;
-  opacity: 0;
-  transition: opacity 250ms var(--timing-function);
-}
-.portfolio-link:hover::after {
-  opacity: 1;
+  transition: opacity var(--timing-appear) var(--timing-function);
 }
 
 .studio-link {
@@ -189,12 +191,9 @@ img {
   height: 4px;
   background-color: var(--accent-text-color);
   border-radius: 2px;
-  opacity: 0;
-  transition: opacity 250ms var(--timing-function);
+  transition: opacity var(--timing-appear) var(--timing-function);
 }
-.studio-link:hover::after {
-  opacity: 1;
-}
+
 /* ================================== Contacts =============================== */
 .our-contacts-list {
   display: flex;
