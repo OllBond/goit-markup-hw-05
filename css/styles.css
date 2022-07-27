@@ -13,6 +13,7 @@
   --background-color-main: #e5e5e5;
   --backround-color-hero: #c4c4c4;
   --bgc-social-icons: #afb1b8;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ========================Body============================== */
 
@@ -168,7 +169,13 @@ img {
 
   background-color: var(--accent-text-color);
   border-radius: 2px;
+  opacity: 0;
+  transition: opacity 250ms var(--timing-function);
 }
+.portfolio-link:hover::after {
+  opacity: 1;
+}
+
 .studio-link {
   position: relative;
 }
@@ -182,6 +189,11 @@ img {
   height: 4px;
   background-color: var(--accent-text-color);
   border-radius: 2px;
+  opacity: 0;
+  transition: opacity 250ms var(--timing-function);
+}
+.studio-link:hover::after {
+  opacity: 1;
 }
 /* ================================== Contacts =============================== */
 .our-contacts-list {
