@@ -155,6 +155,34 @@ img {
 .site-nav-list a:focus {
   color: var(--accent-text-color);
 }
+.portfolio-link {
+  position: relative;
+}
+.portfolio-link::after {
+  position: absolute;
+  bottom: 0;
+  content: '';
+  display: block;
+  width: 78px;
+  height: 4px;
+
+  background-color: var(--accent-text-color);
+  border-radius: 2px;
+}
+.studio-link {
+  position: relative;
+}
+.studio-link::after {
+  position: absolute;
+
+  bottom: 0;
+  content: '';
+  display: block;
+  width: 48px;
+  height: 4px;
+  background-color: var(--accent-text-color);
+  border-radius: 2px;
+}
 /* ================================== Contacts =============================== */
 .our-contacts-list {
   display: flex;
@@ -380,7 +408,6 @@ img {
   content: '';
   width: 50%;
   height: 50%;
-  background: rgba(33, 150, 243, 0.9);
   opacity: 0;
 }
 
