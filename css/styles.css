@@ -406,58 +406,33 @@ img {
   border: 1px solid var(--color-portfolio-projects);
   border-top: none;
 }
-.our-projects-link {
+
+.our-projects-overlay {
   position: relative;
-  display: block;
+  overflow: hidden;
 }
 
-.our-projects-link::before {
+.our-projects-thumb-text {
   position: absolute;
   top: 0;
   left: 0;
 
-  content: '';
-  width: 50%;
-  height: 50%;
-  opacity: 0;
-}
+  transform: translateY(100%);
+  transition: transform var(--timing-appear) cubic-bezier(0.4, 0, 0.2, 1);
 
-.our-projects-link:hover::before,
-.our-projects-link:hover::before {
-  opacity: 1;
-}
+  width: 370px;
+  padding: 63px 24px;
 
-.our-projects-link:hover,
-.our-projects-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.our-projects-thumb {
-  position: absolute;
-  display: flex;
-  transform: translate(0%, -100%);
-  background-color: var(--accent-text-color);
-  opacity: 0;
-}
-
-.our-projects-thumb-text {
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.55;
-  padding: 63px 24px;
+  line-height: 1.56;
   color: var(--background-color);
-
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  /* transition: bgc 250ms cubic-bezier(0.4, 0, 0.2, 1) delay (if it need затримка);*/
+  background-color: rgba(33, 150, 243, 0.9);
+}
+.our-projects-link:hover .our-projects-thumb-text {
+  transform: translateY(0);
 }
 
-.our-projects-thumb:hover,
-.our-projects-thumb:focus {
-  opacity: 0.9;
-}
 .section-title-page-second {
   margin-bottom: 4px;
 
@@ -686,7 +661,6 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 
   min-width: 528px;
   min-height: 581px;
@@ -695,15 +669,25 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: translate var(--timing-appear) cubic-bezier(0.4, 0, 0.2, 1),
+    scale var(--timing-appear) cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .icon-close {
+  width: 11px;
+  height: 11px;
   fill: var(--color-logo);
 }
 .button-close {
   position: absolute;
   top: 8px;
   right: 8px;
+  display: flex;
 
+  justify-content: center;
+  align-items: center;
   width: 30px;
   height: 30px;
 
@@ -712,11 +696,7 @@ img {
   border-radius: 50%;
   cursor: pointer;
 }
-
-/* <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs>
-<symbol id="icon-close" viewBox="0 0 18 18">
-<path d="M15 4.108 13.892 3 9.5 7.392 5.108 3 4 4.108 8.392 8.5 4 12.892 5.108 14 9.5 9.608 13.892 14 15 12.892 10.608 8.5 15 4.108Z"/></path>
-</symbol>
-</defs>
-</svg> */
+.button-close:hover > .icon-close,
+.button-close:focus > .icon-close {
+  fill: var(--accent-color);
+}
