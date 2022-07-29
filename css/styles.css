@@ -152,7 +152,14 @@ img {
 .site-nav-list .site-nav-link {
   color: var(--title-text-color);
 }
+.site-nav-link {
+  transition: color var(--timing-appear) var(--timing-function);
+}
 
+.site-nav-link:hover,
+.site-nav-link:focus {
+  color: var(--accent-text-color);
+}
 .site-nav-list .studio-active-link,
 .site-nav-list a:hover,
 .site-nav-list a:focus {
@@ -651,7 +658,13 @@ img {
 .social-link-team-footer {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color var(--timing-appear) var(--timing-function);
 }
+.social-link-team-footer:hover,
+.social-link-team-footer:focus {
+  background-color: var(--accent-text-color);
+}
+
 .icons-links-team-footer {
   fill: var(--background-color);
 }
@@ -660,6 +673,13 @@ img {
   width: 206px;
   height: 80px;
   margin-right: 70px;
+}
+.footer-link {
+  transition: color var(--timing-appear) var(--timing-function);
+}
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--accent-text-color);
 }
 /* ============================ Modal window =========================*/
 .backdrop {
