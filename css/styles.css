@@ -622,8 +622,8 @@ img {
   line-height: 1.71;
   text-decoration: none;
 }
-.link-email-footer-contacts,
-.link-tel-footer-contacts {
+.footer-link {
+  transition: color var(--timing-duration) var(--timing-function);
   color: var(--color-tel-email);
   font-style: normal;
   font-weight: 400;
@@ -631,15 +631,12 @@ img {
   line-height: 1.71;
   text-decoration: none;
 }
-.link-email-footer-contacts {
-  margin-bottom: 9px;
-}
-.link-email-footer-contacts:hover,
-.link-email-footer-contacts:focus,
-.link-tel-footer-contacts:hover,
-.link-tel-footer-contacts:focus {
+
+.footer-link:hover,
+.footer-link:focus {
   color: var(--accent-text-color);
 }
+
 .join-title-footer {
   color: var(--background-color);
 
@@ -653,13 +650,8 @@ img {
   margin-bottom: 20px;
 }
 .social-link-team-footer {
-  border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color var(--timing-duration) var(--timing-function);
-}
-.social-link-team-footer:hover,
-.social-link-team-footer:focus {
-  background-color: var(--accent-text-color);
 }
 
 .icons-links-team-footer {
@@ -670,13 +662,6 @@ img {
   width: 206px;
   height: 80px;
   margin-right: 70px;
-}
-.footer-link {
-  transition: color var(--timing-duration) var(--timing-function);
-}
-.footer-link:hover,
-.footer-link:focus {
-  color: var(--accent-text-color);
 }
 /* ============================ Modal window =========================*/
 .backdrop {
