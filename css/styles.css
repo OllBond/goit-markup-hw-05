@@ -335,16 +335,19 @@ img {
   line-height: 1.16;
   text-align: center;
 }
-.our-work-overlay {
+
+.our-work-text {
   position: absolute;
   bottom: 0;
   width: 370px;
-  padding: 27px 82px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 27px 82px; */
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8));
-}
-.our-work-text {
+
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
   text-align: center;
   text-transform: uppercase;
@@ -400,7 +403,6 @@ img {
 
 .our-progects-pictures-item {
   width: 370px;
-  height: 404px;
 }
 
 .our-progects-pictures-item:hover,
@@ -441,7 +443,8 @@ img {
   color: var(--background-color);
   background-color: rgba(33, 150, 243, 0.9);
 }
-.our-projects-link:hover .our-projects-thumb-text {
+.our-projects-link:hover .our-projects-thumb-text,
+.our-projects-link:focus .our-projects-thumb-text {
   transform: translateY(0);
 }
 
@@ -556,14 +559,10 @@ img {
   justify-content: center;
 }
 
-.button-page-second-list .button-portfolio:hover,
-.button-page-second-list .button-portfolio:focus {
+.button-portfolio:hover,
+.button-portfolio:focus {
   background-color: var(--accent-text-color);
   color: var(--background-color);
-}
-
-.button-shadow-portfolio:hover,
-.button-shadow-portfolio:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
